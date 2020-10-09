@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Merriweather, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* header*/
+
+header .logo,
+header ul {
+    width: 50%;
+    float: left;
+}
+
+header {
+    background: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.logo img {
+padding: 13px 0px;
+}
+
+header .ul-list {
+    display: flex;
+    list-style: none;
+    padding: 10px 0;
+}
+
+header .ul-list .list-item {
+    padding: 10px 15px;
+}
+
+header .ul-list .list-item a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+}
+
+header .ul-list .list-item a:hover {
+    color: #f05f40;
+}
+
+header input,
+header label {
+    position: absolute;
+    top: 9px;
+    right: 25px;
+}
+
+header input {
+    display: none
+}
+
+header input:checked~.ul-list {
+    display: block;
+}
+
+header .ul-list ul {
+    display: none;
+    position: fixed;
+    text-decoration: none;
+}
+
+.nav-drop {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+}
+
+header .ul-list li:hover>ul {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    list-style: none;
+    line-height: 20px;
+    font-size: 16px;
+    background: #fff;
+    width: 120px;
+    padding: 10px;
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.sticky {
+    position: sticky;
+
+}
+
+/* header*/
+
+/*home*/
+
+.home {
+    background: url("../img/header.jpg");
+    height: 100vh;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+/* home*/
+
+/* service*/
+
+.service {
+    padding: 5rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+.service h2 {
+    color: #191b1d;
+}
+
+.service .service-parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin: 1.5rem 0;
+}
+
+.service .service-parent i {
+    color: #ddd;
+}
+
+.service .service-parent h3 {
+    margin: 1rem 0;
+    color: #333;
+}
+
+.service .service-parent p {
+    color: #a4a4a4;
+}
+
+/* service*/
+
+@media (max-width: 768px) {
+    header .logo,
+    header .ul-list {
+        width: 100%;
+        float: none;
+    }
+    header {
+        position: static;
+        text-align: center;
+    }
+    header .ul-list {
+        display: none;
+    }
+    .service .service-parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    header label {
+        display: none
+    }
+    a
+}
+
+@media (max-width: 991px) {
+    hedear .ul-list {
+        width: 100%;
+        float: none;
+        margin-top: 20px;
+        display: none
+    }
+}
+
+@media (max-width: 575px) {
+    .service .service-parent {
+        grid-template-columns: 1fr;
+    }
